@@ -16,6 +16,8 @@ const
     axios = require('axios'),
     usersRouter = require('./routes/users.js')
 
+const { MONGODB_URI } = process.env
+
 const
 	port = process.env.PORT || 3000,
 	mongoConnectionString = process.env.MONGODB_URI || 'mongodb://localhost/red-rover'
