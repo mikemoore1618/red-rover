@@ -22,12 +22,17 @@ passport.use('local-signup', new LocalStrategy({
 }, (req, email, password, done) => {
     User.findOne({ email: email }, (err, user) => {
         if(err) return done(err)
-        if(user) return done(null, false)
+        if(user) return done(null, false);
         User.create(req.body, (err, newUser) => {
             if(err) return done(err)
             return done(null, newUser)
         })
     })
+    // User.create(req.body, (err, newUser) => {
+    //     if(err) return done(err);
+    //     console.log(newUser)
+    //     return done(null, newUser);
+    // })
 }))
 
 // LOCAL LOGIN
