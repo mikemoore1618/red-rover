@@ -1,0 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  #main-navigation {
+    height: 100vh;
+    background: #444;
+    width: 300px;
+    transform: translateX(-100%);
+    transition: all .5s;
+  }
+
+  #main-navigation ul {
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  #main-navigation.open {
+    transform: translateX(0%);
+  }
+
+  #menu-toggle {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+  }
+
+  #menu-toggle span {
+    display: inline-block;
+    transition: all .5s;
+  }
+
+
+  #menu-toggle span img {
+    width: 30px;
+    transition: all .5s;
+  }
+
+  #menu-toggle.active span {
+    transform: translateX(250px);
+  }
+
+  #menu-toggle.active span img {
+    transform: rotateZ(-180deg);
+  }
+
