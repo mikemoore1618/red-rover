@@ -1,7 +1,3 @@
-/////////////////// ADD TO CONFIG
-//  passport.js ///////////////////
-//-----------------------------------------------------//
-
 const
     passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy,

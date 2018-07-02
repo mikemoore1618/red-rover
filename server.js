@@ -55,7 +55,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-//make currentUser available in every view
+// make currentUser available in every view
 // app.use((req, res, next) =>{
 // 	app.locals.currentUser = req.user
 // 	app.locals.loggedIn = !!req.user
