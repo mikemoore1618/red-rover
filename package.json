@@ -1,0 +1,37 @@
+{
+  "name": "red-rover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "passport.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krazytoukan/red-rover.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krazytoukan/red-rover/issues"
+  },
+  "homepage": "https://github.com/krazytoukan/red-rover#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongodb-session": "^2.0.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-ejs-layouts": "^2.4.0",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.1.7",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
