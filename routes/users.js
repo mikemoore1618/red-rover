@@ -11,7 +11,7 @@ usersRouter.get('/login', (req, res) => {
 })
 
 usersRouter.post('/login', passport.authenticate('local-login', {
-    succesRedirect: '/users/profile',
+    successRedirect: '/users/profile',
     failureRedirect: '/users/login'
 }))
 
@@ -31,20 +31,22 @@ usersRouter.patch('/profile', isLoggedIn, (req, res) => {
 
 // SIGN UP ROUTES
 usersRouter.get('/signup', (req, res) => {
+    console.log('hit')
     res.render('signup')
 })
 
-usersRouter.post('/signup', passport.authenticate('local-signup', {
-    succesRedirect: '/users/profile',
-    failureRedirect: '/users/signup'
-}))
-
 usersRouter.get('/profile', isLoggedIn, (req,res) => {
     // Render the Users profile only if user is logged in
+    console.log('hit')
     User.find({ _by: req.user._id }, (err, userSites) => {
     })
     res.render('profile', { user: req.user })
 })
+
+usersRouter.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/users/profile',
+    failureRedirect: '/users/signup'
+}))
 
 usersRouter.get('/logout', (req, res) => {
     // Destroy the session, and redirect the user back to the home page
