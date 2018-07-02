@@ -44,6 +44,22 @@ body, html {
     transform: rotateZ(-180deg);
   }
 
+  nav ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  nav li {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: red;
+  }
+
  /* ----------------------------------------------- */
 /* 
  #main-chat {
