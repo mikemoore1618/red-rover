@@ -1,47 +1,50 @@
 const User = require('../models/User.js')
 
 module.exports = {
-    //retrieve all Users
+
+// SHOW ALL USERS
     index: (req, res) => {
       User.find({}, (err, allUsers) => {
         if(err) throw err;
         res.json(allUsers)
       })  
     },
-// show a User
+
+// SHOW USER
 show: (req, res) => {
     let id = req.params.id
       User.findById(id, (err, showUser) => {
         if(err) throw err;
-        res.json({ success: true, message: "User found", User: showUser })
+        res.json({ success: true, message: "USER FOUND", User: showUser })
       })
     },
 
-// create a new User
+// CREATE USER
     create: (req, res) => {
         User.create(req.body, (err, savedUser) => {
          if(err) throw err;
-         res.json({ success: true, message: "User created.", User: savedUser })
+         res.json({ success: true, message: "USER CREATED", User: savedUser })
            })
        },
-//update a User
+
+// EDIT USER
     update: (req,res) => {
         let id = req.params.id
-        User.findById(id, (err, UserItem) => {
+        User.findById(id, (err, updateUser) => {
           if(err) throw err;
-          UserItem.save((err, savedUser) => {
+          updateUser.save((err, savedUser) => {
             if(err) throw err;
-            res.json({ success: true, message: "User Updated", User: savedUser})
+            res.json({ success: true, message: "USER UPDATED", User: savedUser})
           })
         })
     },
      
-// delete a User
+// DELETE USER
     destroy: (req, res) => {
         let id = req.params.id
         User.findByIdAndRemove(id, (err, deletedUser) => {
           if(err) throw err;
-          res.json({ success: true, message: "User deleted." })
+          res.json({ success: true, message: "USER DELETED" })
         })
     }
 }
