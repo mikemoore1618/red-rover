@@ -58,11 +58,11 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // make currentUser available in every view
-// app.use((req, res, next) =>{
-// 	app.locals.currentUser = req.user
-// 	app.locals.loggedIn = !!req.user
-// 	next()
-// })
+app.use((req, res, next) => {
+	app.locals.currentUser = req.user
+	app.locals.loggedIn = !!req.user
+	next()
+})
 
 //root route
 app.get('/', (req,res) => {
