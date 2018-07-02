@@ -8,5 +8,12 @@ module.exports = {
         res.json(allUsers)
       })  
     },
-
+// show a User
+show: (req, res) => {
+    let id = req.params.id
+      User.findById(id, (err, showUser) => {
+        if(err) throw err;
+        res.json({ success: true, message: "User found", User: showUser })
+      })
+    },
 }
