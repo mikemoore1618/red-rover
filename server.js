@@ -10,8 +10,8 @@ const
 	cookieParser = require('cookie-parser'),
 	session = require('express-session'),
 	MongoDBStore = require('connect-mongodb-session')(session),
-	// passport = require('passport'),
-	// passportConfig = require("./config/passport"),
+	passport = require('passport'),
+	passportConfig = require("./config/passport"),
 	methodOverride = require('method-override'),
 	axios = require('axios')
 
@@ -51,10 +51,10 @@ app.use(session({
 	store: store
 }))
 
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(passport.initialize())
+app.use(passport.session())
 
-//make currentUser available in every view
+// make currentUser available in every view
 // app.use((req, res, next) =>{
 // 	app.locals.currentUser = req.user
 // 	app.locals.loggedIn = !!req.user
