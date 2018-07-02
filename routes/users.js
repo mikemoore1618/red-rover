@@ -34,13 +34,13 @@ usersRouter.get('/signup', (req, res) => {
 })
 
 usersRouter.post('/signup', passport.authenticate('local-signup', {
-    succesRedirect: 'users/profile',
+    succesRedirect: '/users/profile',
     failureRedirect: '/users/signup'
 }))
 
 usersRouter.get('/profile', isLoggedIn, (req,res) => {
     // Render the Users profile only if user is logged in
-    Post.find({ _by: req.user._id }, (err, userPosts) => {
+    User.find({ _by: req.user._id }, (err, userSites) => {
     })
     res.render('profile', { user: req.user })
 })
