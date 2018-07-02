@@ -1,7 +1,8 @@
 const
     express = require('express'),
     passport = require('passport'),
-    usersRouter = express.Router()
+    usersRouter = new express.Router(),
+    Site = require('../models/Site.js')
 
 // LOGIN ROUTES & Will render login view
 usersRouter.get('/login', (req, res) => {
