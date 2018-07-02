@@ -37,6 +37,8 @@ app.use(cookieParser()) // interpret cookies that are attached to requests
 app.use(express.urlencoded({extended: true})) // interpret standard form data in requests
 app.use(flash()) // set and reset flash messages
 app.use(methodOverride('_method'))
+app.use(express.json())
+app.use(express.static('public'))
 
 const apiClient = axios.create()
 
