@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
     <!-- AXIOS -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- PURE CSS -->  
@@ -15,16 +18,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS-->
     <link rel="stylesheet" href="/css/main.css">
-
-    <script type="text/javascript" src="/js/main.js"></script>
+    
 
     <title>Red Rover</title>
 </head>
 <body>
+        <div class="container">
+                <%- body %>
+            </div>
         <% include ./partials/navbar %>
-    <div class="container">
-        <%- body %>
-    </div>
+
+        <% include ./partials/chatbox %>
+
         <% include ./partials/footer %>
+    <!--JS-->
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>
