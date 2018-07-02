@@ -24,8 +24,8 @@ passport.use('local-signup', new LocalStrategy({
         if(err) return done(err)
         if(user) return done(null, false)
         User.create(req.body, (err, newUser) => {
-            if(err) return done(err)
-            return done(null, newUser)
+            if(err) return console.log(err)
+            return done(null, newUser, null)
         })
     })
 }))
