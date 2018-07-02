@@ -13,7 +13,8 @@ const
 	passport = require('passport'),
 	passportConfig = require("./config/passport"),
 	methodOverride = require('method-override'),
-	axios = require('axios')
+    axios = require('axios'),
+    usersRouter = require('./routes/users.js')
 
 const
 	port = process.env.PORT || 3000,
@@ -44,15 +45,15 @@ app.set('view engine', 'ejs')
 app.use(ejsLayouts)
 
 app.use(session({
-	secret: "boombanana",
+	secret: "redrocks",
 	cookie: {maxAge: 60000000},
 	resave: true,
 	saveUninitialized: false,
 	store: store
 }))
 
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(passport.initialize())
+app.use(passport.session())
 
 //make currentUser available in every view
 // app.use((req, res, next) =>{
@@ -66,7 +67,7 @@ app.get('/', (req,res) => {
 	res.render('index')
 })
 
-// app.use('/users', usersRouter)
+app.use('/users', usersRouter)
 
 app.listen(port, (err) => {
 	console.log(err || "It's alive " + port)
