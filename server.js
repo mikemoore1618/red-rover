@@ -10,8 +10,8 @@ const
 	cookieParser = require('cookie-parser'),
 	session = require('express-session'),
 	MongoDBStore = require('connect-mongodb-session')(session),
-	// passport = require('passport'),
-	// passportConfig = require("./config/passport"),
+	passport = require('passport'),
+	passportConfig = require("./config/passport"),
 	methodOverride = require('method-override'),
 	axios = require('axios')
 
