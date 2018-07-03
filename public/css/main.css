@@ -2,9 +2,26 @@ body, html {
     margin: 0;
     padding: 0;
     background-image: url("https://i.imgur.com/MXZOUlM.jpg");
-    background-size: contain;
+    background-size: cover;
     background-color: #cccccc;
     color: white;
+  }
+
+  #icon {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: orangered;
+    position: absolute;
+    transform: translateX(100%);
+  }
+  h1 {
+  
+    font-family: 'Audiowide' !important;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 30px;
   }
 
   #main-navigation {
@@ -14,12 +31,9 @@ body, html {
     width: 200px;
     transform: translateX(-100%);
     transition: all .5s;
+    position: absolute;
+    top: 0;
 
-  }
-
-  h1 {
-    font-family: 'Audiowide' !important;
-    text-align: center;
   }
 
   #main-navigation ul {
@@ -43,12 +57,12 @@ body, html {
   }
 
   #menu-toggle span img {
-    width: 30px;
+    width: 75px;
     transition: all .5s;
   }
 
   #menu-toggle.active span {
-    transform: translateX(150px);
+    transform: translateX(115px);
   }
 
   #menu-toggle.active span img {
@@ -63,11 +77,11 @@ body, html {
   nav li {
     margin-bottom: 15px;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 18px;
   }
   nav a {
     text-decoration: none;
-    color: rgb(242, 36, 0);
+    color:white;
   }
 
  /* ----------------------------------------------- */
