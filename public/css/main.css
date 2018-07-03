@@ -1,9 +1,19 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-image: url("https://i.imgur.com/MXZOUlM.jpg");
+    background-image: url("https://i.imgur.com/JsEEFAE.jpg");
     background-size: cover;
     background-color: #cccccc;
+    color: white;
+  }
+
+  .btn-mars {
+    background-color: rgb(255, 141, 1);
+    color: white;
+  }
+   
+  .btn-delete {
+    background-color: orangered;
     color: white;
   }
 
@@ -13,6 +23,7 @@ body, html {
     height: 60px;
     border-radius: 50px;
     background-color: orangered;
+    margin-top: 50px;
   }
   h1 {
   
@@ -21,7 +32,11 @@ body, html {
     font-size: 35px;
     padding-top: 30px;
   }
-
+  a {
+    text-decoration: none;
+    color: orange;
+    padding-right: 25px;
+  }
   #main-navigation {
     font-family: 'Audiowide' !important;
     height: 100vh;
