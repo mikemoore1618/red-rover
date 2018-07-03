@@ -13,8 +13,6 @@ body, html {
     height: 60px;
     border-radius: 50px;
     background-color: orangered;
-    position: absolute;
-    transform: translateX(100%);
   }
   h1 {
   
