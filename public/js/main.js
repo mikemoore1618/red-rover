@@ -1,0 +1,1 @@
+const $profDel = $('#delete-account')
