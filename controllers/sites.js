@@ -6,11 +6,11 @@ module.exports = {
   index: (req, res) => {
     Site.find({}, (err, allSites) => {
       if (err) throw err;
-      res.json(allSites)
+      res.json({ status: "SUCCESS", payload: allSites }  )
     })
   },
 
-  // SHOW SITES
+  // SHOW CURRENT SITES
   show: (req, res) => {
     let id = req.params.id
     Site.findById(id, (err, showSite) => {
@@ -20,6 +20,10 @@ module.exports = {
   },
 
   // CREATE SITES
+  new: (req, res) => {
+    res.render('sites/new')
+  },
+
   create: (req, res) => {
     Site.create({ ...req.body, _by: req.user }, (err, savedSite) => {
       if (err) throw err;

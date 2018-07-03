@@ -14,7 +14,8 @@ const
 	passportConfig = require("./config/passport"),
 	methodOverride = require('method-override'),
     axios = require('axios'),
-    usersRouter = require('./routes/users.js')
+	usersRouter = require('./routes/users.js'),
+	sitesRouter = require('./routes/sites.js')
 
 const { MONGODB_URI } = process.env
 
@@ -72,6 +73,7 @@ app.get('/', (req,res) => {
 })
 
 app.use('/users', usersRouter)
+app.use('/sites', sitesRouter)
 
 app.listen(port, (err) => {
 	console.log(err || "It's alive " + port)
