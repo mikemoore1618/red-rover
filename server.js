@@ -14,7 +14,10 @@ const
 	passportConfig = require("./config/passport"),
 	methodOverride = require('method-override'),
     axios = require('axios'),
-    usersRouter = require('./routes/users.js')
+	usersRouter = require('./routes/users.js'),
+	sitesRouter = require('./routes/sites.js')
+
+const { MONGODB_URI } = process.env
 
 const
 	port = process.env.PORT || 3000,
@@ -58,11 +61,11 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // make currentUser available in every view
-// app.use((req, res, next) =>{
-// 	app.locals.currentUser = req.user
-// 	app.locals.loggedIn = !!req.user
-// 	next()
-// })
+app.use((req, res, next) => {
+	app.locals.currentUser = req.user
+	app.locals.loggedIn = !!req.user
+	next()
+})
 
 //root route
 app.get('/', (req,res) => {
@@ -70,6 +73,7 @@ app.get('/', (req,res) => {
 })
 
 app.use('/users', usersRouter)
+app.use('/sites', sitesRouter)
 
 app.listen(port, (err) => {
 	console.log(err || "It's alive " + port)

@@ -3,6 +3,7 @@ const
     passport = require('passport'),
     usersRouter = new express.Router(),
     Site = require('../models/Site.js')
+    User = require('../models/User.js')
 
 // LOGIN ROUTES & Will render login view
 usersRouter.get('/login', (req, res) => {
@@ -10,7 +11,7 @@ usersRouter.get('/login', (req, res) => {
 })
 
 usersRouter.post('/login', passport.authenticate('local-login', {
-    succesRedirect: '/users/profile',
+    successRedirect: '/users/profile',
     failureRedirect: '/users/login'
 }))
 
@@ -30,25 +31,34 @@ usersRouter.patch('/profile', isLoggedIn, (req, res) => {
 
 // SIGN UP ROUTES
 usersRouter.get('/signup', (req, res) => {
+    console.log('hit')
     res.render('signup')
 })
 
-usersRouter.post('/signup', passport.authenticate('local-signup', {
-    succesRedirect: 'users/profile',
-    failureRedirect: '/users/signup'
-}))
-
 usersRouter.get('/profile', isLoggedIn, (req,res) => {
     // Render the Users profile only if user is logged in
-    Post.find({ _by: req.user._id }, (err, userPosts) => {
+    console.log('hit')
+    User.find({ _by: req.user._id }, (err, userSites) => {
     })
     res.render('profile', { user: req.user })
 })
+
+usersRouter.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/users/profile',
+    failureRedirect: '/users/signup'
+}))
 
 usersRouter.get('/logout', (req, res) => {
     // Destroy the session, and redirect the user back to the home page
     req.logout()
     res.redirect('/')
+})
+
+usersRouter.delete('/', isLoggedIn, (req, res) => {
+    console.log("hit")
+    User.findOneAndDelete({ _id : req.user._id}, () => {
+        res.redirect('/users/login')
+    })
 })
 
 // A method used to authorize a user BEFORE allowing them to proceed to the user profile page:

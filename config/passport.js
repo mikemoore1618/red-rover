@@ -4,7 +4,7 @@ const
     User = require('../models/User.js')
 
 passport.serializeUser((user, done) => {
-    done(null, user.id)
+    done(null, user._id)
 })
 
 // Create unique session out 0f the l0gged in users ID
@@ -20,14 +20,19 @@ passport.use('local-signup', new LocalStrategy({
     passwordField: 'password',
     passReqToCallback: true
 }, (req, email, password, done) => {
-    User,findOne({ email: email }, (err, user) => {
+    User.findOne({ email: email }, (err, user) => {
         if(err) return done(err)
-        if(user) return done(null, false)
+        if(user) return done(null, false);
         User.create(req.body, (err, newUser) => {
             if(err) return console.log(err)
             return done(null, newUser, null)
         })
     })
+    // User.create(req.body, (err, newUser) => {
+    //     if(err) return done(err);
+    //     console.log(newUser)
+    //     return done(null, newUser);
+    // })
 }))
 
 // LOCAL LOGIN
