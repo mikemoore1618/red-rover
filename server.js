@@ -69,7 +69,7 @@ app.use((req, res, next) => {
 
 //root route
 app.get('/', (req,res) => {
-	res.render('index')
+	res.redirect('/api/sites')
 })
 
 app.use('/users', usersRouter)
