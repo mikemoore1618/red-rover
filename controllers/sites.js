@@ -6,7 +6,7 @@ module.exports = {
   index: (req, res) => {
     Site.find({}, (err, allSites) => {
       if (err) throw err;
-      res.render('index')
+      res.render('index', {Sites: allSites})
     })
   },
 
@@ -15,7 +15,7 @@ module.exports = {
     let id = req.params.id
     Site.findById(id, (err, showSite) => {
       if (err) throw err;
-      res.json({ success: true, message: " SITE FOUND", Site: showSite })
+      res.render('sites/show', { Site: showSite })
     })
   },
 
