@@ -1,14 +1,25 @@
 body, html {
     margin: 0;
     padding: 0;
+    background-image: url("https://i.imgur.com/MXZOUlM.jpg");
+    background-size: contain;
+    background-color: #cccccc;
+    color: white;
   }
 
   #main-navigation {
+    font-family: 'Audiowide' !important;
     height: 100vh;
-    background: #444;
+    background: rgb(45, 44, 44);
     width: 200px;
     transform: translateX(-100%);
     transition: all .5s;
+
+  }
+
+  h1 {
+    font-family: 'Audiowide' !important;
+    text-align: center;
   }
 
   #main-navigation ul {
@@ -51,13 +62,12 @@ body, html {
 
   nav li {
     margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: bolder;
     font-size: 20px;
   }
-  
   nav a {
     text-decoration: none;
-    color: red;
+    color: rgb(242, 36, 0);
   }
 
  /* ----------------------------------------------- */
