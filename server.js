@@ -69,13 +69,12 @@ app.use((req, res, next) => {
 
 //root route
 app.get('/', (req,res) => {
-	res.redirect('/api/sites')
+	res.redirect('/sites')
 })
 
 app.use('/users', usersRouter)
 app.use('/sites', sitesRouter)
 
-app.use('/api/sites', sitesRouter)
 
 app.listen(port, (err) => {
 	console.log(err || "It's alive " + port)
