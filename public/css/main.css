@@ -1,0 +1,135 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i.imgur.com/MXZOUlM.jpg");
+    background-size: cover;
+    background-color: #cccccc;
+    color: white;
+  }
+
+  #icon {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: orangered;
+  }
+  h1 {
+  
+    font-family: 'Audiowide' !important;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 30px;
+  }
+
+  #main-navigation {
+    font-family: 'Audiowide' !important;
+    height: 100vh;
+    background: rgb(45, 44, 44);
+    width: 200px;
+    transform: translateX(-100%);
+    transition: all .5s;
+    position: absolute;
+    top: 0;
+
+  }
+
+  #main-navigation ul {
+    margin: 0;
+    padding-top: 50px;
+  }
+
+  #main-navigation.open {
+    transform: translateX(0%);
+  }
+  #menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+  }
+
+  #menu-toggle span {
+    display: inline-block;
+    transition: all .5s;
+  }
+
+  #menu-toggle span img {
+    width: 75px;
+    transition: all .5s;
+  }
+
+  #menu-toggle.active span {
+    transform: translateX(115px);
+  }
+
+  #menu-toggle.active span img {
+    transform: rotateZ(-180deg);
+  }
+
+  nav ul {
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  nav li {
+    margin-bottom: 15px;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  nav a {
+    text-decoration: none;
+    color:white;
+  }
+
+ /* ----------------------------------------------- */
+/* 
+ #main-chat {
+  float: right;
+  height: 100vh;
+  background: #444;
+  width: 300px;
+  transform: translateX(-100%);
+  transition: all .5s;
+}
+
+#main-chat ul {
+  float: right;
+  margin: 0;
+  padding-top: 50px;
+}
+
+#main-chat.open {
+  float: right;
+  transform: translateX(0%);
+}
+
+#chat-toggle {
+  float: right;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+#chat-toggle span {
+  float: right;
+  display: inline-block;
+  transition: all .5s;
+}
+
+#chat-toggle span img {
+  float: right;
+  width: 30px;
+  transition: all .5s;
+}
+
+#chat-toggle.active span {
+  float: right;
+  transform: translateX(-250px);
+}
+
+#chat-toggle.active span img {
+  float: right;
+  transform: rotateZ(180deg);
+} */
+

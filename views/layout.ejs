@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <!-- JQUERY -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <!-- AXIOS -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- BOOTSTAP -->  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- RESPONSIVE VIEWPORT-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/main.css">
+    <!--GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Aldrich|Audiowide|Orbitron|Rubik+Mono+One" rel="stylesheet">
+
+    
+
+    <title>Red Rover</title>
 </head>
 <body>
-    <div class="container">
-        <%- body %>
+    <div class"row">
+        <div class"col">
+            <div id='icon'></div>
+            <h1 id='logo'>Red Rover</h1>
+        </div>
+    
     </div>
+        <div class='container'>
+                <%- body %>
+            </div>
+            
+        <% include ./partials/navbar %>
+
+        <% include ./partials/chatbox %>
+
+        <% include ./partials/footer %>
+    <!--JS-->
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>
