@@ -6,7 +6,7 @@ module.exports = {
   index: (req, res) => {
     Site.find({}, (err, allSites) => {
       if (err) throw err;
-      res.json({ status: "SUCCESS", payload: allSites }  )
+      res.render('index')
     })
   },
 
@@ -20,7 +20,8 @@ module.exports = {
   },
 
   // CREATE SITES
-  new: (req, res) => {
+  newSite: (req, res) => {
+    console.log('hit')
     res.render('sites/new')
   },
 
@@ -32,20 +33,24 @@ module.exports = {
   },
 
   // EDIT SITES
+  editSite: (req, res) => {
+    res.render('sites/editSite')
+  },
+
   update: (req, res) => {
     let id = req.params.id
-    Site.findById(id, (err, updateSite) => {
+    Site.findByIdAndUpdate(id, { $set: req.body }, (err, updateSite) => {
       if (err) throw err;
       updateSite.save((err, savedSite) => {
         if (err) throw err;
-        res.json({ success: true, message: "SITE UPDATED", Site: savedSite })
+        res.redirect('/sites')
       })
     })
   },
 
   // DELETE SITES
   destroy: (req, res) => {
-    let id = req.params.id
+    let { id } = req.params
     Site.findByIdAndRemove(id, (err, deletedSite) => {
       if (err) throw err;
       res.json({ success: true, message: "SITE DELETED" })

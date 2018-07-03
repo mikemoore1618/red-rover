@@ -1,5 +1,6 @@
-
 console.log('JS Loaded');
+const apiClient = axios.create()
+
 
 let $menuToggle = $('#menu-toggle')
 let $mainNavigation = $('#main-navigation')

@@ -75,6 +75,8 @@ app.get('/', (req,res) => {
 app.use('/users', usersRouter)
 app.use('/sites', sitesRouter)
 
+app.use('/api/sites', sitesRouter)
+
 app.listen(port, (err) => {
 	console.log(err || "It's alive " + port)
 })
