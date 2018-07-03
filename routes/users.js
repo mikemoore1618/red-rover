@@ -54,6 +54,13 @@ usersRouter.get('/logout', (req, res) => {
     res.redirect('/')
 })
 
+usersRouter.delete('/', isLoggedIn, (req, res) => {
+    console.log("hit")
+    User.findOneAndDelete({ _id : req.user._id}, () => {
+        res.redirect('/users/login')
+    })
+})
+
 // A method used to authorize a user BEFORE allowing them to proceed to the user profile page:
 function isLoggedIn(req, res, next) {
     if(req.isAuthenticated()) return next()
