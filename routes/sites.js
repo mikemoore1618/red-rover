@@ -12,6 +12,11 @@ sitesRouter.get('/:id', siteCont.show)
 sitesRouter.post('/', siteCont.create)
 sitesRouter.patch('/:id', siteCont.update)
 sitesRouter.delete('/:id', siteCont.destroy)
+sitesRouter.post('/', isLoggedIn, siteCont.create)
 
+function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) return next()
+    res.redirect('/users/login')
+}
 
 module.exports = sitesRouter
