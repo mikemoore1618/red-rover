@@ -7,7 +7,11 @@ const
 
 sitesRouter.get('/', siteCont.index)
 sitesRouter.get('/:id', siteCont.show)
-sitesRouter.post('/', siteCont.create)
+sitesRouter.post('/', isLoggedIn, siteCont.create)
 
+function isLoggedIn(req, res, next) {
+    if(req.isAuthenticated()) return next()
+    res.redirect('/users/login')
+}
 
 module.exports = sitesRouter
