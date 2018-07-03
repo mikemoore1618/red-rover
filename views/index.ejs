@@ -1,1 +1,14 @@
 <h1>Red Rover</h1>
+
+<h1> Welcome to Red Planet! </h1>
+<h2> The One Stop Shop for Robots Like You to Chat and Review Popular Mars Destinations</h2>
+
+<% Sites.forEach((s) => { %>
+    <div class="card text-primary" style="margin-bottom: 2rem">
+        <div class="card-body">
+          <h5 class="card-title"> <%= s.name %> </h5>
+          <p class="card-text"> <%= s.body %> </p>
+          <a href="/api/sites/<%= s._id %>" class="btn btn-primary">Go Check it Out</a>
+        </div>
+      </div>
+<% }) %>
