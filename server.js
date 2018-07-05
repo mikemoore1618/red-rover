@@ -15,8 +15,10 @@ const
 	methodOverride = require('method-override'),
     axios = require('axios'),
 	usersRouter = require('./routes/users.js'),
-	sitesRouter = require('./routes/sites.js')
-	apiRouter = require('./routes/api.js')
+	sitesRouter = require('./routes/sites.js'),
+	apiRouter = require('./routes/api.js'),
+	server = require('http').createServer(app),
+	io = require('socket.io')(server)
 
 const { MONGODB_URI } = process.env
 
@@ -77,6 +79,12 @@ app.use('/users', usersRouter)
 app.use('/sites', sitesRouter)
 app.use('/api/sites', apiRouter)
 
-app.listen(port, (err) => {
+io.on('connection', (socket) => {
+	socket.on('sendmessage', (data) => {
+	  io.emit('receivemessage', data)
+	})
+  })
+
+server.listen(port, (err) => {
 	console.log(err || "It's alive " + port)
 })
