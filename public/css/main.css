@@ -148,10 +148,21 @@ body, html {
     color:orange;
   }
 
-  nav h5 {
-    color: orange;
+  nav h5 a {
+    color:orange;
     font-family: 'Audiowide' !important;
     text-align: left;
+    font-size: 24px;
+    float: left;
+    margin-top: 10px;
+  }
+  nav h5 a:hover {
+    color:orangered;
+
+  }
+
+  .home {
+    margin-top: 70px;
   }
 
 /* EDIT SITE PARTIAL */
@@ -258,4 +269,10 @@ nav h5 {
 input {
   width: 220px;
   margin-bottom: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+.btn-delete {
+  float: right;
 }
