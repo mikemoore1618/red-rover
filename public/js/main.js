@@ -20,4 +20,3 @@ let $editSitePartial = $('#edit-site-partial ')
       $editSitePartial.toggleClass('left-open')
       $editSiteToggle.toggleClass('left-active')
     })
-
