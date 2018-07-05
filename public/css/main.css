@@ -1,5 +1,6 @@
 body, html {
     margin: 0;
+    margin-bottom: 150px;
     padding: 0;
     background-image: url("https://i.imgur.com/JsEEFAE.jpg");
     background-size: cover;
@@ -213,7 +214,7 @@ nav h5 {
 
 
 .footer {
-  position: bottom;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
