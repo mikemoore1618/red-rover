@@ -11,26 +11,25 @@
         <%= currentUser.name %>
       </li>
 
-      <li class="nav-item">
-        <a href="/">Home</a>
-      </li>
+            <li class="nav-item">
+                <a href="/"></a>Home</a>
+              </li>
 
-      <li class="nav-item">
-        <a href="/users/<%= currentUser.id%>"> My Sites</a>
-      </li>
+              <li class="nav-item">
+                  <a href="/sites/new">New Site</a>
+              </li>
 
-      <li class="nav-item">
-        <a href="/sites/new<%= currentUser.id %>">New Site</a>
-      </li>
-
-      <%} else {%>
-        <li class="nav-item">
-          <a href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="/users/login">Log In</a>
-        </li>
-
+              <li class="nav-item">
+                  <a href="/users/logout">Log Out</a>
+              </li>
+              
+          <%} else {%>
+          <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/login">Log In</a>
+            </li>
         <li class="nav-item">
           <a href="/users/signup">Sign Up</a>
         </li>
