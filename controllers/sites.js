@@ -28,7 +28,7 @@ module.exports = {
   create: (req, res) => {
     Site.create({ ...req.body, _by: req.user }, (err, savedSite) => {
       if (err) throw err;
-      res.json({ success: true, message: "SITE CREATED", Site: savedSite })
+      res.redirect('/sites')
     })
   },
 

@@ -16,6 +16,7 @@ const
     axios = require('axios'),
 	usersRouter = require('./routes/users.js'),
 	sitesRouter = require('./routes/sites.js')
+	apiRouter = require('./routes/api.js')
 
 const { MONGODB_URI } = process.env
 
@@ -74,7 +75,7 @@ app.get('/', (req,res) => {
 
 app.use('/users', usersRouter)
 app.use('/sites', sitesRouter)
-
+app.use('/api/sites', apiRouter)
 
 app.listen(port, (err) => {
 	console.log(err || "It's alive " + port)
