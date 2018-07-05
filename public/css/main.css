@@ -145,6 +145,12 @@ body, html {
     color:orange;
   }
 
+  nav h5 {
+    color: orange;
+    font-family: 'Audiowide' !important;
+    text-align: left;
+  }
+
 /* EDIT SITE PARTIAL */
 /* -------------------------------------------------------------------------------------------- */
 
@@ -228,4 +234,26 @@ nav h5 {
 
 .footer a {
   margin-left: 25px;
+}
+
+
+
+/* FOOTER PARTIAL */
+/* -------------------------------------------------------------------------------------------- */
+.chatbox h5 {
+  color: orange;
+  margin-top: 60px;
+  font-size: 18px;
+  margin-bottom: 20px;
+
+}
+
+.chatbox {
+  padding: 5px 20px;
+  font-family: 'Ubuntu' !important;
+}
+
+input {
+  width: 220px;
+  margin-bottom: 20px;
 }
