@@ -3,15 +3,15 @@
     <h1>Red Rover</h1>
 </div>
 
-<h1> Welcome to Red Planet! </h1>
-<h2> The One Stop Shop for Robots Like You to Chat and Review Popular Mars Destinations</h2>
+<h3> Welcome to Red Planet! </h3>
+<h5> The One Stop Shop for Robots Like You to Chat and Review Popular Mars Destinations</h5>
 
 <% Sites.forEach((s) => { %>
     <div class="card text-primary" style="margin-bottom: 2rem">
         <div class="card-body">
-          <h5 class="card-title"> <%= s.name %> </h5>
+          <h4 class="card-title"> <%= s.name %> </h4>
           <p class="card-text"> <%= s.body %> </p>
-          <a href="/sites/<%= s._id %>" class="btn btn-primary">Go Check it Out</a>
+          <a href="/sites/<%= s._id %>" class="btn btn-mars">Go Check it Out</a>
         </div>
       </div>
 <% }) %>
