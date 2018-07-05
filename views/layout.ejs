@@ -33,8 +33,11 @@
             </div>
             
         <% include ./partials/navbar %>
-
-        <% include ./partials/chatbox %>
+        <% if(loggedIn) { %>
+            <% include ./partials/chatbox %>
+        <% } else { %>
+            <% include ./partials/nochat %>
+        <% } %>
 
         <% include ./partials/footer %>
     <!--JS-->
