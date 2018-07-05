@@ -8,10 +8,26 @@
     </ul>
     <div class="chatbox">
         <h1>Chat With Other Martian Robots!</h1>
-        <input type="text" id="usertag" placeholder="Name">
         <input type="text" id="message" placeholder="Message">
         <button id="send-chat">Send</button>
         <ul id="chat-list"></ul>
     </div>
-    <script src="/js/chat.js"></script>
+    <script>
+    console.log("Chatbox JS Loaded")
+var socket = io()
+var $message = $('#message')
+var $sendChat = $('#send-chat')
+var $chatList = $('#chat-list')
+
+$sendChat.on("click", () => {
+    var data = { message: $message.val()}
+    socket.emit("sendmessage", data)
+    $message.val("")
+    $message.focus()
+})
+
+socket.on('receivemessage', (data) => {
+    $chatList.prepend(`<li> <%= currentUser.name %> said the following: ${data.message}  </li>`)
+})
+    </script>
 </nav>
