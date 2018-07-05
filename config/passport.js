@@ -22,7 +22,7 @@ passport.use('local-signup', new LocalStrategy({
 }, (req, email, password, done) => {
     User.findOne({ email: email }, (err, user) => {
         if(err) return done(err)
-        if(user) return done(null, false);
+        if(user) return done(null, false, req.flash('signupMessage', 'That email is already taken'));
         User.create(req.body, (err, newUser) => {
             if(err) return console.log(err)
             return done(null, newUser, null)
@@ -43,8 +43,8 @@ passport.use('local-login', new LocalStrategy({
 }, (req, email, password, done) => {
     User.findOne({ email: email }, (err, user) => {
         if(err) return done(err)
-        if(!user || !user.validPassword(password)) return done(null, false)
-        return done(null, user)
+        if(!user || !user.validPassword(password)) return done(null, false, req.flash('loginMessage', 'The email or password is incorrect'))
+        return done(null, user, req.flash('returnMessage', `Welcome back ${user.name}!`))
     })
 }))
 

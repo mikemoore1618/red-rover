@@ -7,7 +7,7 @@ const
 
 // LOGIN ROUTES & Will render login view
 usersRouter.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login', { message: req.flash('loginMessage') })
 })
 
 usersRouter.post('/login', passport.authenticate('local-login', {
@@ -32,7 +32,7 @@ usersRouter.patch('/profile', isLoggedIn, (req, res) => {
 // SIGN UP ROUTES
 usersRouter.get('/signup', (req, res) => {
     console.log('hit')
-    res.render('signup')
+    res.render('signup', { message: req.flash('signupMessage') })
 })
 
 usersRouter.get('/profile', isLoggedIn, (req,res) => {
@@ -40,7 +40,7 @@ usersRouter.get('/profile', isLoggedIn, (req,res) => {
     console.log('hit')
     User.find({ _by: req.user._id }, (err, userSites) => {
     })
-    res.render('profile', { user: req.user })
+    res.render('profile', { user: req.user, message: req.flash('returnMessage') })
 })
 
 usersRouter.post('/signup', passport.authenticate('local-signup', {
