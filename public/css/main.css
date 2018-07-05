@@ -58,6 +58,26 @@ body, html {
     float: right;
   }
 
+  p {
+    font-family: 'Ubuntu' !important;
+    color: black;
+  }
+
+  h4 {
+    font-family: 'Audiowide' !important;
+    color: orange;
+  }
+  h3 {
+    font-family: 'Audiowide' !important;
+    color: orange;
+    text-align: center;
+  }
+
+  h5{
+    font-family: 'Ubuntu' !important;
+    text-align: center;
+  }
+
   /* NAV BAR PARTIAL */
   /* ------------------------------------------------------------------------------------------- */
 
@@ -68,7 +88,7 @@ body, html {
     width: 200px;
     transform: translateX(-100%);
     transition: all .5s;
-    position: absolute;
+    position: fixed;
     top: 0;
   }
 
@@ -136,7 +156,7 @@ body, html {
   right: 0;
   transform: translateX(100%);
   transition: all .5s; 
-  position: absolute;
+  position: fixed;
   top: 0; 
 }
 
@@ -185,10 +205,9 @@ body, html {
   font-family: 'Audiowide' !important;
 }
 
-h5 {
+nav h5 {
   padding-top: 35px;
 }
-
 /* FOOTER PARTIAL */
 /* -------------------------------------------------------------------------------------------- */
 
@@ -199,7 +218,7 @@ h5 {
   bottom: 0;
   width: 100%;
   min-height: 150px;
-  background-color:rgb(38, 38, 38);
+  background-color:black;
   color: white;
   text-align: center;
   display: block;

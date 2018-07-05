@@ -4,6 +4,37 @@
 </div>
 <nav id="main-navigation">
   <ul>
+          <% if(loggedIn) { %>
+            <li class="nav-item">
+              <%= currentUser.name %>
+            </li>
+
+            <li class="nav-item">
+                <a href="/"></a>Home</a>
+              </li>
+              
+            <li class="nav-item">
+                <a href="/users/<%= currentUser.id%>"> My Sites</a>
+            </li>
+      
+            <li class="nav-item">
+                <a href="/sites/new<%= currentUser.id %>">New Site</a>
+            </li>
+      
+          <%} else {%>
+          <li class="nav-item">
+              <a href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/users/login">Log In</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="/users/signup">Sign Up</a>
+            </li>
+      
+        <% } %>
+
     <li><a href="users/login">Log In</a></li>
     <li><a href="signup">Sign Up</a></li>
     <li><a href="#">Contact</a></li>
