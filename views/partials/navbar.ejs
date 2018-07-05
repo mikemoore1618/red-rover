@@ -1,13 +1,15 @@
 <div id="menu-toggle">
-    
-  <span><img src="https://i.imgur.com/VrP8frG.png"></span>
+
+  <span>
+    <img src="https://i.imgur.com/VrP8frG.png">
+  </span>
 </div>
 <nav id="main-navigation">
   <ul>
-          <% if(loggedIn) { %>
-            <li class="nav-item">
-              <%= currentUser.name %>
-            </li>
+    <% if(loggedIn) { %>
+      <li class="nav-item">
+        <%= currentUser.name %>
+      </li>
 
             <li class="nav-item">
                 <a href="/"></a>Home</a>
@@ -28,11 +30,10 @@
             <li class="nav-item">
               <a href="/users/login">Log In</a>
             </li>
+        <li class="nav-item">
+          <a href="/users/signup">Sign Up</a>
+        </li>
 
-            <li class="nav-item">
-                <a href="/users/signup">Sign Up</a>
-            </li>
-      
         <% } %>
   </ul>
 </nav>
