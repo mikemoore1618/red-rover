@@ -64,7 +64,7 @@ body, html {
   #main-navigation {
     font-family: 'Audiowide' !important;
     height: 100vh;
-    background: rgb(45, 44, 44);
+    background: rgb(38, 38, 38);
     width: 200px;
     transform: translateX(-100%);
     transition: all .5s;
@@ -131,7 +131,7 @@ body, html {
 #edit-site-partial {
   font-family: 'Audiowide' !important;
   height: 100vh;
-  background: rgb(45, 44, 44);
+  background: rgb(38, 38, 38);
   width: 200px;
   right: 0;
   transform: translateX(100%);
@@ -175,4 +175,24 @@ body, html {
   transform: rotateZ(180deg);
 }
 
+/* FOOTER PARTIAL */
+/* -------------------------------------------------------------------------------------------- */
 
+
+.footer {
+  position: bottom;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 150px;
+  background-color:rgb(38, 38, 38);
+  color: white;
+  text-align: center;
+  display: block;
+  margin: auto; 
+  padding: 60px;
+}
+
+.footer a {
+  margin-left: 25px;
+}
