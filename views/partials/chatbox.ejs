@@ -6,17 +6,18 @@
     <div class="chatbox">
         <h5>Chat With Other Martian Robots!</h5>
         <input type="text" id="message" placeholder="Message">
-        <button class="btn btn-mars">Send</button>
+        <button  id="send-chat" class="btn btn-mars">Send</button>
         <ul id="chat-list"></ul>
     </div>
     <script>
-    console.log("Chatbox JS Loaded")
+console.log("Chatbox JS Loaded")
 var socket = io()
 var $message = $('#message')
 var $sendChat = $('#send-chat')
 var $chatList = $('#chat-list')
 
 $sendChat.on("click", () => {
+    console.log('chat clicked')
     var data = { message: $message.val()}
     socket.emit("sendmessage", data)
     $message.val("")
