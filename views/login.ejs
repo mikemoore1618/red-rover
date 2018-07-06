@@ -1,13 +1,11 @@
 <div class="col-sm-6 offset-md-3">
-  
-    <div class="branded-title">
-      <div class="icon"></div>
+  <div class="branded-title">
+    <div class="icon"></div>
       <h1>Log In</h1>
       <% if (message.length > 0) { %>
-        <div class="alert alert-danger"><%= message %></div>
+    <div class="alert alert-danger"><%= message %></div>
       <% } %>
     </div>
-
     <form method="post" action="/users/login">
       <div class="form-group">
         <label for="email">Email</label>
@@ -22,4 +20,4 @@
     <hr>
     <a href="/users/signup">Sign Up</a>
     <a href="/" class="right">Home</a>
-  </div>
+</div>

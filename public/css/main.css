@@ -4,7 +4,6 @@ html {
 
 body, html {
     margin: 0;
-    /* margin-bottom: 150px; */
     padding: 0;
     background-image: url("https://i.imgur.com/JsEEFAE.jpg");
     background-size: cover;
@@ -21,6 +20,7 @@ body, html {
   .btn-delete {
     background-color: orangered;
     color: white;
+    float: right;
   }
 
   .icon {
@@ -31,6 +31,7 @@ body, html {
     background-color: orangered;
     margin-top: 50px;
   }
+  
   h1 {
     font-family: 'Audiowide' !important;
     text-align: center;
@@ -41,6 +42,7 @@ body, html {
   .branded-title {
     position: relative;
   }
+
   .branded-title h1 {
     position:absolute;
     top: 0;
@@ -73,6 +75,7 @@ body, html {
     font-family: 'Audiowide' !important;
     color: orange;
   }
+
   h3 {
     font-family: 'Audiowide' !important;
     color: orange;
@@ -80,7 +83,7 @@ body, html {
     margin: 50px;
   }
 
-  h5{
+  h5 {
     font-family: 'Ubuntu' !important;
     text-align: center;
     margin-bottom: 40px;
@@ -88,8 +91,8 @@ body, html {
 
   .center-img {
     margin: 40px 0;
-
   }
+
   .center-img img {
     display: block;
     margin: 0 auto;
@@ -97,7 +100,7 @@ body, html {
   }
 
   /* NAV BAR PARTIAL */
-  /* ------------------------------------------------------------------------------------------- */
+  /* ------------------------------------------------------ */
 
   #main-navigation {
     font-family: 'Audiowide' !important;
@@ -118,6 +121,7 @@ body, html {
   #main-navigation.right-open {
     transform: translateX(0%);
   }
+
   #menu-toggle {
     position: absolute;
     top: 10px;
@@ -153,6 +157,7 @@ body, html {
     font-weight: bolder;
     font-size: 18px;
   }
+
   nav a {
     text-decoration: none;
     color:white;
@@ -171,9 +176,9 @@ body, html {
     float: left;
     margin-top: 10px;
   }
+
   nav h5 a:hover {
     color:orangered;
-
   }
 
   nav h5 {
@@ -182,7 +187,6 @@ body, html {
     text-align: left;
     font-size: 24px;
     margin-top: 10px;
-
   }
 
   .home {
@@ -190,7 +194,7 @@ body, html {
   }
 
 /* EDIT SITE PARTIAL */
-/* -------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------ */
 
 #edit-site-partial {
   font-family: 'Audiowide' !important;
@@ -251,9 +255,9 @@ body, html {
 nav h5 {
   padding-top: 35px;
 }
-/* FOOTER PARTIAL */
-/* -------------------------------------------------------------------------------------------- */
 
+/* FOOTER PARTIAL */
+/*-------------------------------------------- */
 
 #footer {
   margin-top: 100px;
@@ -264,16 +268,14 @@ nav h5 {
   margin-left: 25px;
 }
 
-
-
 /* CHAT PARTIAL */
-/* -------------------------------------------------------------------------------------------- */
+/*------------------------------------------ */
+
 .chatbox h5 {
   color: orange;
   margin-top: 60px;
   font-size: 18px;
   margin-bottom: 20px;
-
 }
 
 .chatbox {
@@ -286,8 +288,4 @@ input {
   margin-bottom: 20px;
 }
 
-/* -------------------------------------------------------------------------------------------- */
-
-.btn-delete {
-  float: right;
-}
+/* ----------------------------------------- */
