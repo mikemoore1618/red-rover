@@ -67,7 +67,6 @@ app.use(passport.session())
 app.use((req, res, next) => {
 	app.locals.currentUser = req.user
 	app.locals.loggedIn = !!req.user
-	console.log(req.user.id.constructor)
 	next()
 })
 
