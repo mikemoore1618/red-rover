@@ -20,10 +20,11 @@
         <button type="submit" class="btn btn-mars edit-site-btn">Submit</button>
         </div>
       </form>
-
+<hr>
       <form method="post" action="/sites/<%= Site._id%>?_method=DELETE">
-        <hr>
-        <button type="submit" class="btn btn-site-delete edit-site-btn">Delete</button>
+        <div class ="form-group">
+            <button type="submit" class="btn btn-site-delete edit-site-btn">Delete</button>
+        </div>
       </form>
 
       <% } else { %>
