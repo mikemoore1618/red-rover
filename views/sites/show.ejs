@@ -1,9 +1,21 @@
-
-<h1><%= Site.name %></h1>
+<div class="branded-title">
+    <div class="icon"></div>
+    <h1><%= Site.name %></h1>
+</div>
+    
 <% if(!!Site.photo === true){ %>
-    <img src="<%= Site.photo %>" alt="It does not appear that thius">
-    <% } %>
-    <h3><%= Site.body %></h3>
+    <div class ="center-img">
+        <img src="<%= Site.photo %>" alt="It does not appear that this exists">
+    </div>
+
+<% } %>
+
+<div class="card text-primary" style="margin-bottom: 2rem">
+    <div class="card-body">
+        <h4 class="card-title"> <%= Site.name %> </h4>
+        <p class="card-text"> <%= Site.body %> </p>
+    </div>
+</div>
     
     
     <% include ../partials/editsite %>

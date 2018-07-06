@@ -4,12 +4,13 @@
     </span>
 </div>
 <nav id="edit-site-partial">
-    <ul>
         <h5>Edit Site</h5>
-    </ul>
+    <form>
+
     
     <% if(currentUser._id.equals(Site._by)) { %>
     <form method="post" action="/sites/<%= Site._id%>?_method=PATCH">
+
         <div class="form-group">
           <input type="text" class="form-control"  id="name"  name="name"  value="<%=Site.name%>" placeholder="Site Name">
         </div>

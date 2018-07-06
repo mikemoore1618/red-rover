@@ -4,12 +4,13 @@ html {
 
 body, html {
     margin: 0;
-    margin-bottom: 150px;
+    /* margin-bottom: 150px; */
     padding: 0;
     background-image: url("https://i.imgur.com/JsEEFAE.jpg");
     background-size: cover;
     background-color: #cccccc;
     color: white;
+    min-height: 100vh;
   }
 
   .btn-mars {
@@ -83,6 +84,16 @@ body, html {
     font-family: 'Ubuntu' !important;
     text-align: center;
     margin-bottom: 40px;
+  }
+
+  .center-img {
+    margin: 40px 0;
+
+  }
+  .center-img img {
+    display: block;
+    margin: 0 auto;
+    max-width: 688px;
   }
 
   /* NAV BAR PARTIAL */
@@ -165,6 +176,15 @@ body, html {
 
   }
 
+  nav h5 {
+    color:orange;
+    font-family: 'Audiowide' !important;
+    text-align: left;
+    font-size: 24px;
+    margin-top: 10px;
+
+  }
+
   .home {
     margin-top: 70px;
   }
@@ -226,7 +246,6 @@ body, html {
 
 .edit-site-btn {
   margin-top: 20px;
-  font-family: 'Audiowide' !important;
 }
 
 nav h5 {
@@ -236,17 +255,9 @@ nav h5 {
 /* -------------------------------------------------------------------------------------------- */
 
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: 150px;
-  color: white;
-  text-align: center;
-  display: block;
-  margin: auto; 
-  padding: 60px;
+#footer {
+  margin-top: 100px;
+  margin-bottom: 25px;
 }
 
 .footer a {
@@ -255,7 +266,7 @@ nav h5 {
 
 
 
-/* FOOTER PARTIAL */
+/* CHAT PARTIAL */
 /* -------------------------------------------------------------------------------------------- */
 .chatbox h5 {
   color: orange;
