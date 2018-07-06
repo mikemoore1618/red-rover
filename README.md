@@ -1,4 +1,4 @@
-
+# Red Rover
 
 
 Earth: The year is 2139. The  massive, long-standing global military conflict between the nations and militaries of Humanity and a collective of self-aware robots let by Mecha-Elon Musk is over and the world finally knows true peace.
@@ -21,7 +21,6 @@ Look no further! Red Rover is the one-stop-shop for Robots like you to Review Po
 * Bootstrap
 * Express
 * Mongoose
-* Axios
 * Mongo DB
 * Passport
 * Morgan
@@ -40,7 +39,17 @@ Look no further! Red Rover is the one-stop-shop for Robots like you to Review Po
 
 
 ##Installation/startup instructions. 
-How can a potential employer run your code locally on their own machine?
+
+Step by step
+
+* Download this directory from Github to a local directory on your computer
+* Open Terminal
+* Open the project directory and type in: npm i (This will install npm packages needed to run the app)
+* Make sure you have MongoDB, if not, download it from the MongoDB website.
+* Initiate a Mongo local server with command MONGOD
+* Open a new terminal tab and make sure you are not in MongoDB or have a node server open in that tab
+* Open a new tab on your browser and type in localhost:3000 in the address bar. (If you encounter an error or a different application loads, make sure you do not have a previous local server running in a different terminal tab.)
+* Start exploring/posting/sharing the red planet!
 
 
 ##Wire Frames
@@ -59,6 +68,8 @@ How can a potential employer run your code locally on their own machine?
 
 ##Backlog 
 Descriptions of any unsolved problems or major hurdles your team had to overcome.
+
+Ping the NASA Curiosity API to download actual ground photos of Mars and dynamically display them.
 
 
 ##Trello
