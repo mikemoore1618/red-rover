@@ -6,7 +6,7 @@
 <nav id="edit-site-partial">
         <h5>Edit Site</h5>
     
-    <% if(currentUser._id.equals(Site._by)) { %>3
+    <% if(!!currentUser === true && currentUser._id.equals(Site._by)) { %>
     <form method="post" action="/sites/<%= Site._id%>?_method=PATCH">
 
         <div class="form-group">
