@@ -10,6 +10,7 @@
         <ul id="chat-list"></ul>
     </div>
     <script>
+
 console.log("Chatbox JS Loaded")
 var socket = io()
 var $message = $('#message')
@@ -18,14 +19,14 @@ var $chatList = $('#chat-list')
 
 $sendChat.on("click", () => {
     console.log('chat clicked')
-    var data = { message: $message.val()}
+    var data = {  user: "<%= currentUser.name %>", message: $message.val()}
     socket.emit("sendmessage", data)
     $message.val("")
     $message.focus()
 })
 
 socket.on('receivemessage', (data) => {
-    $chatList.prepend(`<li> <%= currentUser.name %> said the following: ${data.message}  </li>`)
+    $chatList.prepend(`<li> ${data.user} said the following: ${data.message}  </li>`)
 })
     </script>
 </nav>
