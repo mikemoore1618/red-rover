@@ -6,14 +6,21 @@
 <h3> Welcome to Red Planet! </h3>
 <h5> The One Stop Shop for Robots Like You to Chat and Review Popular Mars Destinations</h5>
 
-<% Sites.forEach((s) => { %>
-    <div class="card text-primary" style="margin-bottom: 2rem">
-        <div class="card-body">
-            <h4 class="card-title"> <%= s.name %> </h4>
-            <a href="/sites/<%= s._id %>" class="btn btn-mars">Go Check it Out</a>
+<% for (let i = 0; i < Sites.length; i++) { %>
+    <div class="row">
+    <% for (j = 0; j < Sites[i].length; j++) { %> 
+        <div class="col-md-3">
+            <div class="card text-primary" style="margin-bottom: 2rem">
+                <div class="card-body">
+                    <h5 class="card-title"> <%= Sites[i][j].name %> </h5>
+                    <a href="/sites/<%= Sites[i][j]._id %>" class="btn btn-mars">Go Check it Out</a>
+                </div>
+            </div>
         </div>
+    <% } %>
     </div>
-    <% }) %>
+<% } %>
+
     
 <% if(loggedIn) { %>
     <% include ./partials/chatbox %>
