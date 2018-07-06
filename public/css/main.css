@@ -22,6 +22,10 @@ body, html {
     color: white;
     float: right;
   }
+  .btn-site-delete {
+    background-color: orangered;
+    color: white;
+  }
 
   .icon {
     margin: 0 auto;
