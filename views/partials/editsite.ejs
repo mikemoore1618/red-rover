@@ -8,7 +8,7 @@
     <form>
 
     
-    <% if(currentUser._id.equals(Site._by)) { %>
+    <% if(currentUser._id.equals(Site._by)) { %>3
     <form method="post" action="/sites/<%= Site._id%>?_method=PATCH">
 
         <div class="form-group">
@@ -24,11 +24,13 @@
 
       <form method="post" action="/sites/<%= Site._id%>?_method=DELETE">
         <hr>
-        <button type="submit" class="btn btn-delete edit-site-btn">Delete this site.</button>
+        <button type="submit" class="btn btn-delete edit-site-btn">Delete</button>
       </form>
 
       <% } else { %>
-        <h5> Only the creator of this page can edit or delete this site!</h5>
+      <div id="creator">
+        <h4> Only the creator of this page can edit or delete this site!</h4>
+      </div>
       <% } %>
 
     </nav>

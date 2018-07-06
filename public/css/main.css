@@ -229,7 +229,6 @@ body, html {
   float: right;
 } 
 
-
 #edit-site-toggle span img {
   width: 75px;
   transition: all .5s;
@@ -252,8 +251,22 @@ body, html {
   margin-top: 20px;
 }
 
+#creator h4 {
+  color: white;
+  font-family: 'Ubuntu' !important;
+  padding-left: 20px;
+  font-size: 19px;
+
+}
+
 nav h5 {
   padding-top: 35px;
+}
+
+#edit-site-partial h5 {
+  padding-left: 20px;
+  padding-top: 95px;
+ 
 }
 
 /* FOOTER PARTIAL */
