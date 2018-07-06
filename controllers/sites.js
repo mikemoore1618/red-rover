@@ -1,4 +1,5 @@
 const Site = require('../models/Site.js')
+const _ = require('underscore');
 
 module.exports = {
 
@@ -6,7 +7,9 @@ module.exports = {
   index: (req, res) => {
     Site.find({}, (err, allSites) => {
       if (err) throw err;
-      res.render('index', {Sites: allSites})
+      let chunkedSites = _.chunk(allSites, 4);
+      console.log(chunkedSites)
+      res.render('index', {Sites: chunkedSites})
     })
   },
 
@@ -53,7 +56,7 @@ module.exports = {
     let { id } = req.params
     Site.findByIdAndRemove(id, (err, deletedSite) => {
       if (err) throw err;
-      res.json({ success: true, message: "SITE DELETED" })
+      res.redirect('/sites')
     })
   }
 }
