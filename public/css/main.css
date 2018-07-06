@@ -81,6 +81,16 @@ body, html {
     margin-bottom: 40px;
   }
 
+  .center-img {
+    margin: 40px 0;
+
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 688px;
+  }
+
   /* NAV BAR PARTIAL */
   /* ------------------------------------------------------------------------------------------- */
 
@@ -233,16 +243,9 @@ nav h5 {
 
 
 .footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
-  min-height: 150px;
-  color: white;
-  text-align: center;
-  display: block;
-  margin: auto; 
-  padding: 60px;
 }
 
 .footer a {
@@ -251,7 +254,7 @@ nav h5 {
 
 
 
-/* FOOTER PARTIAL */
+/* CHAT PARTIAL */
 /* -------------------------------------------------------------------------------------------- */
 .chatbox h5 {
   color: orange;
