@@ -5,8 +5,6 @@
 </div>
 <nav id="edit-site-partial">
         <h5>Edit Site</h5>
-    <form>
-
     
     <% if(currentUser._id.equals(Site._by)) { %>
     <form method="post" action="/sites/<%= Site._id%>?_method=PATCH">
@@ -20,6 +18,7 @@
         <div class="form-group">
             <input type="text" class="form-control" id="photo" name="photo" value="<%=Site.photo%>" placeholder="Image Url">
         <button type="submit" class="btn btn-mars edit-site-btn">Submit</button>
+        </div>
       </form>
 
       <form method="post" action="/sites/<%= Site._id%>?_method=DELETE">
