@@ -7,17 +7,18 @@ Robots have now begin to spread across the Solar System and Mars has emerged as 
 
 But where to go? How can you sift throw the endless pages or useless travel sites and the onsloaught of spam and advertisements?
 
-Look no further! Red Rover is the one-stop-shop for Robots like you to Review Popular Mars Destinations! log in, search sites, read descriptions, view images, and even chat with other live robots!
+Look no further! Red Rover is the one-stop-shop for Robots like you to Review Popular Mars Destinations! Log in, search sites, read descriptions, view images, and even chat with other live robots!
 
 ##Screenshots
 
 ##Technologies
 
+* Node.js
 * HTML
 * CSS
 * Jquery
 * Java Script
-* Bootsrap
+* Bootstrap
 * Express
 * Mongoose
 * Axios
@@ -26,6 +27,10 @@ Look no further! Red Rover is the one-stop-shop for Robots like you to Review Po
 * Morgan
 * Nodemon
 * Socket.io
+* Bcrypt for Node.js
+* EJS
+* EJS Template View
+* GitHub
 
 
 
@@ -43,7 +48,11 @@ How can a potential employer run your code locally on their own machine?
 
 ![alt text](https://i.imgur.com/R2RJZQn.png)
 
+![alt text](https://i.imgur.com/IYMzfJh.jpg)
+
 ##Entity Relationship Diagrams
+
+![alt text](https://i.imgur.com/z3IAPFy.jpg)
 
 
 ##Backlog 
@@ -51,3 +60,4 @@ Descriptions of any unsolved problems or major hurdles your team had to overcome
 
 
 ##Trello
+https://trello.com/b/x6NtduEU

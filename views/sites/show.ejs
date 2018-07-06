@@ -1,6 +1,9 @@
 
 <h1><%= Site.name %></h1>
-<span><%= Site.photo %></span>
-<h3><%= Site.body %></h3>
-
-<a href="/">Home</a>
+<% if(!!Site.photo === true){ %>
+    <img src="<%= Site.photo %>" alt="It does not appear that thius">
+    <% } %>
+    <h3><%= Site.body %></h3>
+    
+    <a href="/">Home</a>
+    <% include ../partials/editsite %>
