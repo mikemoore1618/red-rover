@@ -5,17 +5,27 @@
     <ul>
         <h5>Edit Site</h5>
     </ul>
-
-    <form>
+    
+    <% if(currentUser._id.equals(Site._by)) { %>
+    <form method="post" action="/sites/<%= Site._id%>?_method=PATCH">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Site Name">
+          <input type="text" class="form-control"  id="name"  name="name"  value="<%=Site.name%>" placeholder="Site Name">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="About Site">
+          <input type="text" class="form-control" id="body" name="body" value="<%=Site.body%>" placeholder="About Site">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Image Url">
+            <input type="text" class="form-control" id="photo" name="photo" value="<%=Site.photo%>" placeholder="Image Url">
         <button type="submit" class="btn btn-mars edit-site-btn">Submit</button>
       </form>
+
+      <form method="post" action="/sites/<%= Site._id%>?_method=DELETE">
+        <hr>
+        <button type="submit" class="btn btn-delete edit-site-btn">Delete this site.</button>
+      </form>
+
+      <% } else { %>
+        <h5> Only the creator of this page can edit or delete this site!</h5>
+      <% } %>
 
     </nav>
