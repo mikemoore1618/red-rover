@@ -53,7 +53,7 @@ module.exports = {
     let { id } = req.params
     Site.findByIdAndRemove(id, (err, deletedSite) => {
       if (err) throw err;
-      res.json({ success: true, message: "SITE DELETED" })
+      res.redirect('/sites')
     })
   }
 }
