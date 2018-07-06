@@ -1,8 +1,12 @@
-<div class="col-sm-6 offset-md-3">
+<div class="branded-title">
+    <div class="icon"></div>
     <h1>New Site</h1>
+  </div>
+
+<div class="col-sm-6 offset-md-3">
     <form method="post" action="/sites">
       <div class="form-group">
-        <label for="title"> Name</label>
+        <label for="title"> Site Name</label>
         <input type="text" class="form-control" id="name" name="name">
       </div>
       <div class="form-group">
@@ -13,8 +17,6 @@
         <label for="title"> Image URL</label>
         <input type="text" class="form-control" id="photo" name="photo" placeholder="Insert an Image URL for this location.">
       </div>
-      <button type="submit" class="btn btn-info">Submit</button>
+      <button type="submit" class="btn btn-mars">Submit</button>
     </form>
-    <p>Or, <a href="/sites/new">Sign Up</a></p>
-    <p>Go back <a href="/">home</a>.</p>
   </div>

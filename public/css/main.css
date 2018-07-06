@@ -72,11 +72,13 @@ body, html {
     font-family: 'Audiowide' !important;
     color: orange;
     text-align: center;
+    margin: 50px;
   }
 
   h5{
     font-family: 'Ubuntu' !important;
     text-align: center;
+    margin-bottom: 40px;
   }
 
   /* NAV BAR PARTIAL */
@@ -146,10 +148,21 @@ body, html {
     color:orange;
   }
 
-  nav h5 {
-    color: orange;
+  nav h5 a {
+    color:orange;
     font-family: 'Audiowide' !important;
     text-align: left;
+    font-size: 24px;
+    float: left;
+    margin-top: 10px;
+  }
+  nav h5 a:hover {
+    color:orangered;
+
+  }
+
+  .home {
+    margin-top: 70px;
   }
 
 /* EDIT SITE PARTIAL */
@@ -225,7 +238,6 @@ nav h5 {
   bottom: 0;
   width: 100%;
   min-height: 150px;
-  background-color:black;
   color: white;
   text-align: center;
   display: block;
@@ -257,4 +269,10 @@ nav h5 {
 input {
   width: 220px;
   margin-bottom: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+.btn-delete {
+  float: right;
 }

@@ -1,10 +1,9 @@
+<div class="branded-title">
+    <div class="icon"></div>
+    <h1>Edit Profile</h1>
+  </div>
+
 <div class="col-sm-6 offset-md-3">
-
-    <div class="branded-title">
-      <div class="icon"></div>
-      <h1>Edit Profile</h1>
-    </div>
-
     <form method="post" action="/users/profile?_method=PATCH">
       <div class="form-group">
         <label for="name">Name</label>
@@ -19,12 +18,12 @@
         <input type="password" class="form-control" id="password" name="password">
       </div>
       <button type="submit" class="btn btn-mars">Submit</button>
+      <form method="POST" action="/users?_method=DELETE">
+        <button  type="submit" class="btn btn-delete"> Delete
+          Account</button>
     </form>
-    <hr>
-    <p>Go back to your <a href="/users/profile">profile</a>.</p>
   </div>
-  <div></div>
-  <form method="POST" action="/users?_method=DELETE">
-    <button  type="submit" class="btn btn-delete"> Click this button to delete your account!</button>
+  <div>
+  
   </form>
 </div>
