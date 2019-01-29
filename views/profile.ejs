@@ -1,0 +1,11 @@
+<div class="branded-title">
+    <div class="icon"></div>
+    <h1><%= currentUser.name %> </h1>
+</div>
+<div class="container">
+    <a href="/users/profile/edit">Edit Profile</a>
+    <a href="/users/logout" class="btn btn-warning btn-sm">Logout</a>
+    <% if (message.length > 0) { %>
+        <div class="alert alert-success"><%= message %></div>
+    <% } %>
+</div>

@@ -14,7 +14,13 @@ const
 	passportConfig = require("./config/passport"),
 	methodOverride = require('method-override'),
     axios = require('axios'),
-    usersRouter = require('./routes/users.js')
+	usersRouter = require('./routes/users.js'),
+	sitesRouter = require('./routes/sites.js'),
+	apiRouter = require('./routes/api.js'),
+	server = require('http').createServer(app),
+	io = require('socket.io')(server)
+
+const { MONGODB_URI } = process.env
 
 const
 	port = process.env.PORT || 3000,
@@ -37,6 +43,8 @@ app.use(cookieParser()) // interpret cookies that are attached to requests
 app.use(express.urlencoded({extended: true})) // interpret standard form data in requests
 app.use(flash()) // set and reset flash messages
 app.use(methodOverride('_method'))
+app.use(express.json())
+app.use(express.static('public'))
 
 const apiClient = axios.create()
 
@@ -56,19 +64,27 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // make currentUser available in every view
-// app.use((req, res, next) =>{
-// 	app.locals.currentUser = req.user
-// 	app.locals.loggedIn = !!req.user
-// 	next()
-// })
+app.use((req, res, next) => {
+	app.locals.currentUser = req.user
+	app.locals.loggedIn = !!req.user
+	next()
+})
 
 //root route
 app.get('/', (req,res) => {
-	res.render('index')
+	res.redirect('/sites')
 })
 
 app.use('/users', usersRouter)
+app.use('/sites', sitesRouter)
+app.use('/api/sites', apiRouter)
 
-app.listen(port, (err) => {
+io.on('connection', (socket) => {
+	socket.on('sendmessage', (data) => {
+	  io.emit('receivemessage', data)
+	})
+  })
+
+server.listen(port, (err) => {
 	console.log(err || "It's alive " + port)
 })
